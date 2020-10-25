@@ -6,6 +6,7 @@
 <p class="text-center"><strong>Einfach im Hauptmenü die 3 Eingeben und dort die 1</strong></p>
 <p class="text-center"><br></p>
 
+Download Tool --> https://github.com/elzershark/ioBrokerBackupInstallTool/archive/master.zip
 !!!!!!! Klick Mich !!!!!
 
  ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓
