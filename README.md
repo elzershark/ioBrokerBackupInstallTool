@@ -6,4 +6,8 @@
 <p class="text-center"><strong>Einfach im Hauptmenü die 3 Eingeben und dort die 1</strong></p>
 <p class="text-center"><br></p>
 
+!!!!!!! Klick Mich !!!!!
+
+ ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓
+
 [![Raspberry ohne SD nur über SSD](https://img.youtube.com/vi/jItle0HXxg0/0.jpg)](https://www.youtube.com/watch?v=jItle0HXxg0 "Raspberry ohne SD nur über SSD")
