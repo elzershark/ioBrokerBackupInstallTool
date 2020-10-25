@@ -5,8 +5,5 @@
 <p class="text-center"><br></p>
 <p class="text-center"><strong>Einfach im Hauptmenü die 3 Eingeben und dort die 1</strong></p>
 <p class="text-center"><br></p>
-<p class="text-center">https://youtu.be/nyE-IxfPhy8</p>
-<p class="text-center">https://youtu.be/2rOhrd8CQC4</p>
-<p class="text-center">https://youtu.be/XFhpkYv-JNc</p>
-<p class="text-center">https://youtu.be/X8pvERBMU6s</p>
-<p class="text-center"><br></p>
+
+[![Raspberry ohne SD nur über SSD](https://img.youtube.com/vi/jItle0HXxg0/0.jpg)](https://www.youtube.com/watch?v=jItle0HXxg0 "Raspberry ohne SD nur über SSD")
