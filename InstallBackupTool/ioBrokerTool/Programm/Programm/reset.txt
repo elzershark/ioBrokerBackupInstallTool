@@ -1,0 +1,13 @@
+iobroker stop
+sudo su <<HERE
+chmod 777 /opt/iobroker/
+cd /opt/iobroker/
+rm -r iobroker-data/
+rm -r node_modules/
+tar -xzf archive.tar.gz
+rm -r archive.tar.gz
+chown -R iobroker /opt/iobroker
+HERE
+iobroker start
+
+

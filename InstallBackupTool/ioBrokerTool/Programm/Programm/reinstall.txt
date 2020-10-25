@@ -1,0 +1,11 @@
+iobroker stop
+sudo su <<HERE
+cd /opt/iobroker
+mv reinstall.sh reinstall.dos
+tr -d '\r' < reinstall.dos > reinstall.sh
+chmod +x reinstall.sh
+chown -R iobroker /opt/iobroker
+./reinstall.sh
+chown -R iobroker /opt/iobroker
+HERE
+iobroker start

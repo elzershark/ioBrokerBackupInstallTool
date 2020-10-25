@@ -1,0 +1,1 @@
+crontab -l | sed -e '/sudo mount -t/d' | crontab; (crontab -l && echo "@reboot sudo mount -t exfat -o utf8,uid=pi,gid=pi,noatime /dev/sda1 /media/usbstick") | crontab -; sudo mount -t exfat -o utf8,uid=pi,gid=pi,noatime /dev/sda1 /media/usbstick

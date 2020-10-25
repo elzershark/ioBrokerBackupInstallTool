@@ -1,0 +1,10 @@
+sudo su <<HERE
+apt update && apt upgrade -y
+umount -l /media/usbstick
+apt-get -y install ntfs-3g hfsutils hfsprogs exfat-fuse -y
+mkdir /media
+mkdir /media/usbstick
+chmod 777 /media/usbstick
+reboot
+HERE
+

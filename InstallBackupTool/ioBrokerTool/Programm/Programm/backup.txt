@@ -1,0 +1,6 @@
+iobroker stop
+sudo su <<HERE
+cd /opt/iobroker/
+tar -czf archive.tar.gz iobroker-data node_modules
+HERE
+iobroker start

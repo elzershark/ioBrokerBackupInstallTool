@@ -1,0 +1,7 @@
+iobroker stop
+sudo su <<HERE
+cd /opt/iobroker
+chown -R iobroker /opt/iobroker
+HERE
+npm rebuild
+iobroker start

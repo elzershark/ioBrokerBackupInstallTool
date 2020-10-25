@@ -1,0 +1,3 @@
+sudo su <<HERE
+blkid -o list -w /dev/null
+HERE

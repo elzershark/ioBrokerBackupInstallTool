@@ -1,0 +1,13 @@
+iobroker stop
+sudo su <<HERE
+apt update -y && apt upgrade -y
+apt-get --purge remove node -y
+apt-get --purge remove nodejs -y
+apt-get autoremove -y
+curl -sL https://deb.nodesource.com/setup_12.x | bash -
+apt-get install -y nodejs
+mkdir /media
+mkdir /media/usbstick
+chmod 777 /media/usbstick
+HERE
+curl -sL https://iobroker.net/install.sh | bash -

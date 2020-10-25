@@ -1,0 +1,5 @@
+cd /opt/iobroker/
+iobroker stop
+tar -czf /media/usbstick/backup-$(date +%d-%m-%Y-%H-%M-%S).tar.gz iobroker-data node_modules
+iobroker start
+find /media/usbstick -cmin +10080 -delete
