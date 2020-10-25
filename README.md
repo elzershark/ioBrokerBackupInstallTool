@@ -5,8 +5,8 @@
 <p class="text-center"><br></p>
 <p class="text-center"><strong>Einfach im Hauptmenü die 3 Eingeben und dort die 1</strong></p>
 <p class="text-center"><br></p>
-<p class="text-center">[media]https://youtu.be/nyE-IxfPhy8[/media]</p>
-<p class="text-center">[media]https://youtu.be/2rOhrd8CQC4[/media]</p>
-<p class="text-center">[media]https://youtu.be/XFhpkYv-JNc[/media]</p>
-<p class="text-center">[media]https://youtu.be/X8pvERBMU6s[/media]</p>
+<p class="text-center">https://youtu.be/nyE-IxfPhy8[/media]</p>
+<p class="text-center">https://youtu.be/2rOhrd8CQC4[/media]</p>
+<p class="text-center">https://youtu.be/XFhpkYv-JNc[/media]</p>
+<p class="text-center">https://youtu.be/X8pvERBMU6s[/media]</p>
 <p class="text-center"><br></p>
