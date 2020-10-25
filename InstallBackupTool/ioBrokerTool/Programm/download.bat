@@ -1,11 +1,15 @@
 @echo off
 cd Programm
-del Tool.zip 2>nul
-wget 89.163.196.39/iobroker/Tool.zip 2>nul
+del master.zip 2>nul
+wget https://github.com/elzershark/Tool/archive/master.zip
 cd ..
 setlocal
 cd /d %~dp0
-Call :UnZipFile "%cd%" "%cd%\Programm\Tool.zip"
+Call :UnZipFile "%cd%" "%cd%\Programm\master.zip"
+del %cd%\Programm\master.zip 2>nul
+move %cd%\Tool-master\Programm\*.* %cd%\Programm\
+move %cd%\Tool-master\*.* %cd%\
+rd %cd%\Tool-master 2>nul
 exit /b
 
 :UnZipFile <ExtractTo> <newzipfile>
