@@ -3,7 +3,7 @@ set IP=raspberrypi
 set BEN=pi
 set PSW=raspberry
 cd Programm
-wget -t X, --tries=2 elzershark.com/Datei.txt 2>nul
+wget -t X, --tries=2 https://raw.githubusercontent.com/elzershark/ioBrokerBackupInstallTool/master/Datei.txt 2>nul
 echo.
 echo.
 echo                Internet Version:
