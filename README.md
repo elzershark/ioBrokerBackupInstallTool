@@ -11,4 +11,7 @@ Download Tool --> https://github.com/elzershark/ioBrokerBackupInstallTool/archiv
 
  ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓
 
+Tool starten. Wenn die Versionsnummer abweicht, einfach die 3 Eingeben.
+Dadurch wird automatisch das Tool geupdatet.
+
 [![Raspberry ohne SD nur über SSD](https://img.youtube.com/vi/jItle0HXxg0/0.jpg)](https://www.youtube.com/watch?v=jItle0HXxg0 "Raspberry ohne SD nur über SSD")
