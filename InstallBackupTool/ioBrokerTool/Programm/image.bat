@@ -14,23 +14,41 @@ echo.
 echo            INSTALLATION IOBROKER
 echo      ---------------------------------
 echo.
-echo   [1] Image fuer Raspberry downloaden
-echo   [2] Eine SD Karte loeschen
-echo   [3] Image auf SD Karte installieren
-echo   [4] Installieren von ioBroker
-echo   !!!VOR der Installation 1x Putty testen ob verbunden wird!!!
+echo    Auf der Webseite das Tool runterladen und starten.
+echo    OS waehlen klicken und runter auf loeschen. Danach:
+echo    OS waehlen klicken,
+echo    Raspberry PI OS (other) - "lite" klicken.
+echo    Nach Installation der SD Karte (oder USB-Stick) die Dateien SSH und
+echo    falls Wlan, die Datei wpa_supplicant.(conf) bearbeiten
+echo    und in die SD Karte (boot) reinkopieren.
+echo    Raspberry starten mit der SD-Karte oder USB Stick
+echo    Das Tool hier neu starten und die Daten fuer den Raspi
+echo    eingeben (IP - Benutzer - Passwort)
+echo    Standard: Benutzer= pi PW= raspberry
+echo    2 zum installieren von IoBroker eingeben.
 echo.
-echo   [5] Beenden
+echo      ---------------------------------
+echo.
+echo   [1] Image fuer Raspberry downloaden
+echo   [2] Installieren von ioBroker
+echo   !!!LESEN was dann da steht im Fenster!!!
+echo.
+echo   [3] Beenden
 echo.
 set abw=0
 set /p abw="Bitte Auswahl eingeben: "
 if %abw%==1 goto RAS3
-if %abw%==2 goto DISK
-if %abw%==3 goto INSTALL
-if %abw%==4 goto IOBROKER
-if %abw%==5 goto STOP1
+if %abw%==2 goto IOBROKER
+if %abw%==3 goto STOP1
 goto STOP1
 :RAS3
+start https://www.raspberrypi.org/software/
+cd Programm/Torrent/
+cd ..
+START "" "Torrent"
+cd ..
+goto END1
+:RAStest
 cd Programm/Torrent/
 start aria2c.exe https://downloads.raspberrypi.org/raspbian_lite_latest.torrent --seed-time 0 --seed-ratio 0.0
 cd ..
