@@ -32,8 +32,27 @@ if %asw%==7 goto STOP
 start repa.bat
 exit
 :NODE
+echo       Welche Node Version?
+echo             =============
+echo.	
+echo   [1] Node 12 (Standard)
+echo   [2] Node 14
+echo   [3] Beenden
+echo.
+set asw=0
+set /p asw="Bitte Auswahl eingeben: "
+if %asw%==1 goto NODE12
+if %asw%==2 goto NODE14
+if %asw%==3 goto STOP
+goto END
+:NODE12
 cd Programm
-start cmd /k plink.exe %BEN%@%IP% -pw %PSW% -m node.txt
+start cmd /k plink.exe %BEN%@%IP% -pw %PSW% -m node12.txt
+cd ..
+goto END
+:NODE14
+cd Programm
+start cmd /k plink.exe %BEN%@%IP% -pw %PSW% -m node14.txt
 cd ..
 goto END
 :AFIX
