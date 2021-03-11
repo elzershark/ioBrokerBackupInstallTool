@@ -88,7 +88,7 @@ set /p num="                          Bitte eintippen wie der USB-Pfad heisst. (
 set /p vat="                          Bitte exfat oder vfat eingeben: "
 echo.
 echo.
-echo crontab -l ^| sed -e '/sudo mount -t/d' ^| crontab; ^(crontab ^-l ^&^& echo "@reboot sudo mount -t %vat% -o utf8,uid=iobroker,gid=iobroker,noatime /dev/%num% /media/usbstick") ^| crontab -; sudo mount -t %vat% -o utf8,uid=iobroker,gid=iobroker,noatime /dev/%num% /media/usbstick; sudo mkdir /media; sudo mkdir /media/usbstick>Programm/usb.txt
+echo crontab -l ^| sed -e '/sudo mount -t/d' ^| crontab; ^(crontab ^-l ^&^& echo "@reboot sudo mount -t %vat% -o utf8,uid=iobroker,gid=iobroker,noatime /dev/%num% /media/usbstick") ^| crontab -; sudo mount -t %vat% -o utf8,uid=iobroker,gid=iobroker,noatime /dev/%num% /media/usbstick; sudo mkdir /media; sudo mkdir /media/usbstick; sudo chown -R iobroker /media/usbstick>Programm/usb.txt
 
 start /WAIT Programm/plink.exe %BEN%@%IP% -pw %PSW% -m Programm/usb.txt
 start backu.bat
