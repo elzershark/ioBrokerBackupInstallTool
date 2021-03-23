@@ -1,7 +1,6 @@
 iobroker stop
 sudo su <<HERE
 apt update -y && apt upgrade -y
-apt-get --purge remove node -y
 apt-get --purge remove nodejs -y
 apt-get autoremove -y
 curl -sL https://deb.nodesource.com/setup_14.x | bash -
@@ -11,3 +10,15 @@ mkdir -p /media/usbstick
 chmod 777 /media/usbstick
 HERE
 curl -sL https://iobroker.net/install.sh | bash -
+iobroker stop
+sudo su <<HERES
+cd /opt/iobroker
+chown -R iobroker /opt/iobroker
+HERES
+curl -sL https://iobroker.net/fix.sh | bash -
+npm install -y iobroker.js-controller --unsafe-perm --production --save --prefix
+npm rebuild
+iobroker update
+iobroker upgrade self
+iobroker upgrade
+iobroker start
