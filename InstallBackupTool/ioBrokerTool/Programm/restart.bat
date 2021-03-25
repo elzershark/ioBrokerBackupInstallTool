@@ -19,7 +19,7 @@ echo   [4] Putty oeffnen
 echo   [5] Backup Order anzeigen
 echo   [6] Download Image und Installation ioBroker
 echo   [7] Software W-Lan / Data- Transfer
-echo   [8] USB
+echo   [8] Menue Backup direkt auf Raspberry und/oder USB
 echo   [9] Beenden
 echo.
 set asw=0
