@@ -2,8 +2,8 @@
 echo                     USB- Laufwerk am Raspberry installieren
 echo                        ---------------------------------
 echo.
-echo       !!!Vor dem allerersten BACKUP MIT USB unbedingt einmalig die [3] ausführen. !!!
-echo       !!!Vor dem allerersten BACKUP OHNE USB unbedingt 1x die [3] ausführen. !!!
+echo       !!!Vor dem allerersten BACKUP MIT USB unbedingt einmalig die [3] ausfuehren. !!!
+echo       !!!Vor dem allerersten BACKUP OHNE USB unbedingt 1x die [3] ausfuehren. !!!
 echo       !!!Der USB-Stick muss mit FAT-32 oder exFAT formatiert sein/werden !!!
 echo.
 echo   !!! Der USB-Stick muss nach jedem manuellem entfernen vom Raspy neu gemountet werden [4] !!!
