@@ -118,7 +118,32 @@ start /WAIT Programm/plink.exe %BEN%@%IP% -pw %PSW% -m Programm/usbback.txt
 start backu.bat
 exit
 :USBRET
+echo.
+echo.
+echo                 Das zuruecksetzen wirklich ausfuehren?
+echo                 Es muss ein Backup vorhanden sein.
+echo                 Sonst wird IoBroker nicht mehr funktionieren.
+echo                 Im neuen Fenster werden die Backups angezeigt.
+echo                 Sind dort keine, unbedingt Abbrechen.
+echo.
+echo.
+cd Programm
+start cmd /k plink.exe %BEN%@%IP% -pw %PSW% -m list.txt
+cd ..
+echo.	
+echo   [1] Weiter
+echo   [2] Abbrechen
+echo.
+set asw=0
+set /p asw="Bitte Auswahl eingeben: "
+if %asw%==1 goto WEITER
+if %asw%==2 goto END
+goto END
+:WEITER
 start /WAIT Programm/plink.exe %BEN%@%IP% -pw %PSW% -m Programm/usbret.txt
+start backu.bat
+exit
+:END
 start backu.bat
 exit
 :BEEN
