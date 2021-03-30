@@ -1,1 +1,4 @@
 iobroker stop
+sudo su <<HERE
+chmod 777 /opt/iobroker
+HERE
