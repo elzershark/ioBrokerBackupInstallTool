@@ -1,5 +1,6 @@
 iobroker stop
 sudo su <<HERE
+chmod 777 /opt/iobroker
 cd /opt/iobroker/
 rm -r iobroker-data/
 rm -r node_modules/
@@ -9,6 +10,7 @@ last=`ls -tr | tail -1`
 tar -xzf $last -C /opt/iobroker
 sudo su <<HERES
 cd /opt/iobroker/
+chmod 755 /opt/iobroker
 chown -R iobroker /opt/iobroker
 HERES
 iobroker start
