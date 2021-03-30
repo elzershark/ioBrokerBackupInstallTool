@@ -1,6 +1,5 @@
 iobroker stop
 sudo su <<HERE
-chmod 777 /opt/iobroker/
 cd /opt/iobroker/
 rm -r iobroker-data/
 rm -r node_modules/
