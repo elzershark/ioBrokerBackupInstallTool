@@ -5,8 +5,7 @@ rm -r iobroker-data/
 rm -r node_modules/
 tar -xzf archive.tar.gz
 rm -r archive.tar.gz
+chmod 755 /opt/iobroker
 chown -R iobroker /opt/iobroker
 HERE
 iobroker start
-
-
