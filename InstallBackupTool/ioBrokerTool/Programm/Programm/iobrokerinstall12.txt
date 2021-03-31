@@ -5,9 +5,6 @@ apt-get --purge remove nodejs -y
 apt-get autoremove -y
 curl -sL https://deb.nodesource.com/setup_12.x | bash -
 apt-get install -y nodejs
-mkdir -p /media
-mkdir -p /media/usbstick
-chmod 777 /media/usbstick
 HERE
 curl -sL https://iobroker.net/install.sh | bash -
 iobroker stop
