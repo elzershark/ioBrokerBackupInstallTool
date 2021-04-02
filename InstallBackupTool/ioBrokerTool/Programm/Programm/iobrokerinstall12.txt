@@ -12,8 +12,8 @@ sudo su <<HERES
 cd /opt/iobroker
 chown -R iobroker /opt/iobroker
 HERES
-curl -sL https://iobroker.net/fix.sh | bash -
 npm install -y iobroker.js-controller --unsafe-perm --production --save --prefix
+curl -sL https://iobroker.net/fix.sh | bash -
 npm rebuild
 iobroker update
 iobroker upgrade self
