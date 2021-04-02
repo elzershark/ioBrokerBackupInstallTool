@@ -13,6 +13,7 @@ cd /opt/iobroker
 chown -R iobroker /opt/iobroker
 HERES
 npm install -y iobroker.js-controller --unsafe-perm --production --save --prefix
+iobroker stop
 curl -sL https://iobroker.net/fix.sh | bash -
 npm rebuild
 iobroker update
