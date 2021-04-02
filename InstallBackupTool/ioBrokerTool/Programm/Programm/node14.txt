@@ -9,9 +9,10 @@ curl -sL https://deb.nodesource.com/setup_14.x | bash -
 apt-get install -y nodejs
 chown -R iobroker /opt/iobroker
 HERE
+npm install -y iobroker.js-controller --unsafe-perm --production --save --prefix
 iobroker stop
 curl -sL https://iobroker.net/fix.sh | bash -
-npm install -y iobroker.js-controller --unsafe-perm --production --save --prefix
+iobroker stop
 npm rebuild
 iobroker update
 iobroker upgrade self
