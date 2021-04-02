@@ -10,8 +10,9 @@ apt-get install -y nodejs
 chown -R iobroker /opt/iobroker
 HERE
 iobroker stop
-curl -sL https://iobroker.net/fix.sh | bash -
 npm install -y iobroker.js-controller --unsafe-perm --production --save --prefix
+iobroker stop
+curl -sL https://iobroker.net/fix.sh | bash -
 npm rebuild
 iobroker update
 iobroker upgrade self
