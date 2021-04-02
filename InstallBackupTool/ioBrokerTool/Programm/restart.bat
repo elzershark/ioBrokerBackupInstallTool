@@ -13,7 +13,7 @@ echo             Backup-Skript
 echo             =============
 echo.	
 echo   [1] Backup erstellen
-echo   [2] Backup zuruecksetzen
+echo   [2] Backup zuruecksetzen (BACKUP MUSS VORHANDEN SEIN)
 echo   [3] ioBroker reparieren/upgraden
 echo   [4] Putty oeffnen
 echo   [5] Backup Order anzeigen
