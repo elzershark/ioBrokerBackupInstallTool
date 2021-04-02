@@ -16,6 +16,7 @@ iobroker stop
 npm install -y iobroker.js-controller --unsafe-perm --production --save --prefix
 iobroker stop
 curl -sL https://iobroker.net/fix.sh | bash -
+iobroker stop
 npm rebuild
 iobroker update
 iobroker upgrade self
