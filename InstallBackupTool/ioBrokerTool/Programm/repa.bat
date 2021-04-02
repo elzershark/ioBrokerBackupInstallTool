@@ -88,12 +88,6 @@ goto END
 :PUTTY
 start putty.bat
 goto END
-:END
-start repa.bat
-exit
-:STOP
-start restart.bat
-exit
 :NODE12
 cd Programm
 start cmd /k plink.exe %BEN%@%IP% -pw %PSW% -m node12.txt
@@ -114,3 +108,9 @@ cd Programm
 start cmd /k plink.exe %BEN%@%IP% -pw %PSW% -m adapter14.txt
 cd ..
 goto END
+:END
+start repa.bat
+exit
+:STOP
+start restart.bat
+exit
