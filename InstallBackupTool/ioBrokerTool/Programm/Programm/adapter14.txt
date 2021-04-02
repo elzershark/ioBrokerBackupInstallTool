@@ -13,9 +13,9 @@ chown -R iobroker /opt/iobroker
 HERE
 curl -sL https://iobroker.net/install.sh | bash -
 iobroker stop
-curl -sL https://iobroker.net/fix.sh | bash -
-iobroker stop
 npm install -y iobroker.js-controller --unsafe-perm --production --save --prefix
+iobroker stop
+curl -sL https://iobroker.net/fix.sh | bash -
 npm rebuild
 iobroker update
 iobroker upgrade self
