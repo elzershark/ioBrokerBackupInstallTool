@@ -16,7 +16,8 @@ echo   [1] ioBroker reparieren/NPM/Node/JS-Controller/Adapter Upgraden
 echo   [2] Allgemeines Fix Script (sollte reichen)
 echo   [3] NPM Adapter rebuild. Nach NPM Upgrade (1) ausfuehren
 echo   [4] reinstall.sh script ausfuehren
-echo   [5] Adapter komplett neu installieren. Dauert sehr lange. Im Log gucken
+echo   [5] PANIK REPARIEREN. LETZTE HOFFNUNG. Log gucken in Iobroker.
+echo       Bleibt alles erhalten. Node Ordner wird geloescht. Dauert lange.
 echo   [6] Putty starten
 echo   [7] Beenden
 echo.
@@ -71,9 +72,18 @@ start cmd /k plink.exe %BEN%@%IP% -pw %PSW% -m reinstall.txt
 cd ..
 goto END
 :ADAPTER
-cd Programm
-start cmd /k plink.exe %BEN%@%IP% -pw %PSW% -m adapter.txt
-cd ..
+echo       Welche Node Version?
+echo             =============
+echo.	
+echo   [1] Node 12 (Standard)
+echo   [2] Node 14
+echo   [3] Beenden
+echo.
+set asw=0
+set /p asw="Bitte Auswahl eingeben: "
+if %asw%==1 goto ADAPTER12
+if %asw%==2 goto ADAPTER14
+if %asw%==3 goto STOP
 goto END
 :PUTTY
 start putty.bat
@@ -84,3 +94,23 @@ exit
 :STOP
 start restart.bat
 exit
+:NODE12
+cd Programm
+start cmd /k plink.exe %BEN%@%IP% -pw %PSW% -m node12.txt
+cd ..
+goto END
+:NODE14
+cd Programm
+start cmd /k plink.exe %BEN%@%IP% -pw %PSW% -m node14.txt
+cd ..
+goto END
+:ADAPTER12
+cd Programm
+start cmd /k plink.exe %BEN%@%IP% -pw %PSW% -m adapter12.txt
+cd ..
+goto END
+:ADAPTER14
+cd Programm
+start cmd /k plink.exe %BEN%@%IP% -pw %PSW% -m adapter14.txt
+cd ..
+goto END
