@@ -2,8 +2,6 @@
 echo                     USB- Laufwerk am Raspberry installieren
 echo                        ---------------------------------
 echo.
-echo       !!!Vor dem allerersten BACKUP MIT USB unbedingt einmalig die [3] ausfuehren. !!!
-echo       !!!Vor dem allerersten BACKUP OHNE USB unbedingt 1x die [3] ausfuehren. !!!
 echo       !!!Der USB-Stick muss mit FAT-32 oder exFAT formatiert sein/werden !!!
 echo.
 echo   !!! Der USB-Stick muss nach jedem manuellem entfernen vom Raspy neu gemountet werden [4] !!!
@@ -20,8 +18,8 @@ echo   -----------------------------------------------------------------
 echo			[3] USB Mount Kontrolle u. Ordner erstellen auf Raspi / Stick
 echo			[4] USB Aktivieren
 echo			[5] USB Auswerfen
-echo			[6] BACKUP auf USB oder Raspi erstellen/speichern
-echo			[7] IoBroker mit Backup von USB o. Raspi zuruecksetzen
+echo			[6] Backup erstellen
+echo			[7] Backup zuruecksetzen (BACKUP MUSS VORHANDEN SEIN)
 echo			[8] Beenden
 echo.
 set asw=0
