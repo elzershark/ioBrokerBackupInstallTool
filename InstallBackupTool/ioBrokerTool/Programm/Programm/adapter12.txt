@@ -22,3 +22,4 @@ iobroker update
 iobroker upgrade self
 iobroker upgrade
 iobroker start
+iobroker restart admin
