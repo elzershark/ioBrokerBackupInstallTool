@@ -42,7 +42,13 @@ if %abw%==2 goto IOBROKER
 if %abw%==3 goto STOP1
 goto STOP1
 :RAS3
-start https://www.raspberrypi.org/software/
+IF exist "%ProgramFiles(x86)%\Raspberry Pi Imager\rpi-imager.exe" (
+    start rpi-imager.exe
+) ELSE (IF exist "%ProgramFiles%\Raspberry Pi Imager\rpi-imager.exe" (
+    start rpi-imager.exe
+) ELSE (start https://www.raspberrypi.org/software/
+)
+)
 cd Programm/Torrent/
 cd ..
 START "" "Torrent"
