@@ -3,6 +3,6 @@ sudo su <<HERE
 cd /opt/iobroker
 chown -R iobroker /opt/iobroker
 HERE
-curl -sL https://iobroker.net/fix.sh | bash -
 npm install -y iobroker.js-controller --unsafe-perm --production --save --prefix
+curl -sL https://iobroker.net/fix.sh | bash -
 iobroker start
