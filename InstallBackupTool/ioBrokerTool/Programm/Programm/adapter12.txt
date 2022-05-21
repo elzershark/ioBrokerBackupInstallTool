@@ -23,6 +23,6 @@ iobroker stop
 npm rebuild
 iobroker update
 iobroker upgrade self
-iobroker upgrade
+iobroker upgrade -y
 iobroker start
 iobroker restart admin
