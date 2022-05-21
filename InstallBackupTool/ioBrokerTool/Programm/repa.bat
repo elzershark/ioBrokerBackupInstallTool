@@ -36,15 +36,17 @@ exit
 echo       Welche Node Version?
 echo             =============
 echo.	
-echo   [1] Node 12 (Standard)
-echo   [2] Node 14
-echo   [3] Beenden
+echo   [1] Node 12
+echo   [2] Node 14 (Standard)
+echo   [3] Node 16
+echo   [4] Beenden
 echo.
 set asw=0
 set /p asw="Bitte Auswahl eingeben: "
 if %asw%==1 goto NODE12
 if %asw%==2 goto NODE14
-if %asw%==3 goto STOP
+if %asw%==3 goto NODE16
+if %asw%==4 goto STOP
 goto END
 :NODE12
 cd Programm
@@ -54,6 +56,11 @@ goto END
 :NODE14
 cd Programm
 start cmd /k plink.exe %BEN%@%IP% -pw %PSW% -m node14.txt
+cd ..
+goto END
+:NODE16
+cd Programm
+start cmd /k plink.exe %BEN%@%IP% -pw %PSW% -m node16.txt
 cd ..
 goto END
 :AFIX
@@ -75,15 +82,17 @@ goto END
 echo       Welche Node Version?
 echo             =============
 echo.	
-echo   [1] Node 12 (Standard)
-echo   [2] Node 14
-echo   [3] Beenden
+echo   [1] Node 12
+echo   [2] Node 14 (Standard)
+echo   [3] Node 16
+echo   [4] Beenden
 echo.
 set asw=0
 set /p asw="Bitte Auswahl eingeben: "
 if %asw%==1 goto ADAPTER12
 if %asw%==2 goto ADAPTER14
-if %asw%==3 goto STOP
+if %asw%==3 goto ADAPTER16
+if %asw%==4 goto STOP
 goto END
 :PUTTY
 start putty.bat
@@ -98,6 +107,11 @@ cd Programm
 start cmd /k plink.exe %BEN%@%IP% -pw %PSW% -m node14.txt
 cd ..
 goto END
+:NODE16
+cd Programm
+start cmd /k plink.exe %BEN%@%IP% -pw %PSW% -m node16.txt
+cd ..
+goto END
 :ADAPTER12
 cd Programm
 start cmd /k plink.exe %BEN%@%IP% -pw %PSW% -m adapter12.txt
@@ -106,6 +120,12 @@ goto END
 :ADAPTER14
 cd Programm
 start cmd /k plink.exe %BEN%@%IP% -pw %PSW% -m adapter14.txt
+cd ..
+goto END
+:END
+:ADAPTER16
+cd Programm
+start cmd /k plink.exe %BEN%@%IP% -pw %PSW% -m adapter16.txt
 cd ..
 goto END
 :END
