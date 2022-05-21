@@ -1,0 +1,24 @@
+iobroker stop
+sudo su <<HERE
+apt update -y && apt upgrade -y
+apt-get --purge remove nodejs -y
+apt-get autoremove -y
+curl -sL https://deb.nodesource.com/setup_16.x | bash -
+apt-get install -y nodejs
+HERE
+curl -sL https://iobroker.net/install.sh | bash -
+iobroker stop
+sudo su <<HERES
+cd /opt/iobroker
+chown -R iobroker /opt/iobroker
+HERES
+npm install -y iobroker.js-controller --unsafe-perm --production --save --prefix
+iobroker stop
+curl -sL https://iobroker.net/fix.sh | bash -
+iobroker stop
+npm rebuild
+iobroker update
+iobroker upgrade self
+iobroker upgrade
+iobroker start
+iobroker restart admin
