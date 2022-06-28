@@ -36,7 +36,7 @@ exit
 echo       Welche Node Version?
 echo             =============
 echo.	
-echo   [1] Node 12
+echo   [1] Node 12 
 echo   [2] Node 14 (Standard)
 echo   [3] Node 16
 echo   [4] Beenden
@@ -82,7 +82,7 @@ goto END
 echo       Welche Node Version?
 echo             =============
 echo.	
-echo   [1] Node 12
+echo   [1] Node 12 
 echo   [2] Node 14 (Standard)
 echo   [3] Node 16
 echo   [4] Beenden
@@ -122,7 +122,6 @@ cd Programm
 start cmd /k plink.exe %BEN%@%IP% -pw %PSW% -m adapter14.txt
 cd ..
 goto END
-:END
 :ADAPTER16
 cd Programm
 start cmd /k plink.exe %BEN%@%IP% -pw %PSW% -m adapter16.txt
