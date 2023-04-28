@@ -10,9 +10,9 @@ pause
 echo       Welche Node Version?
 echo             =============
 echo.	
-echo   [1] Node 12
-echo   [2] Node 14 (Standard)
-echo   [3] Node 16
+echo   [1] Node 16
+echo   [2] Node 18 (Standard)
+echo   [3] Node 20
 echo   [4] Beenden
 echo.
 set asw=0
