@@ -7,7 +7,7 @@ rm -r node_modules/
 chown -R iobroker /opt/iobroker
 apt update -y && apt upgrade -y
 apt-get purge nodejs -y && apt-get autoremove -y && apt-get autoclean -y
-curl -sL https://deb.nodesource.com/setup_14.x | bash -
+curl -sL https://deb.nodesource.com/setup_18.x | bash -
 apt-get install -y nodejs
 chown -R iobroker /opt/iobroker
 HERE
