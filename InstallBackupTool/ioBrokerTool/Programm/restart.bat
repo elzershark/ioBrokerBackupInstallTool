@@ -3,15 +3,17 @@ goto END
 :END
 cls
 echo.
-echo.
 echo                 Zugangsdaten
 echo      ---------------------------------
 echo              IP= %IP%
 echo              Benutzername= %BEN%
 echo              Passwort= %PSW% 
 echo      =================================
-echo.
-echo.
+echo      Sollte sudo ein Passwort brauchen
+echo      In Putty sudo visudo eingeben/erweitere            
+echo          %%sudo ALL=(ALL:ALL) ALL
+echo          %BEN% ALL=NOPASSWD:ALL
+echo.	
 echo             Backup-Skript
 echo             =============
 echo.	
