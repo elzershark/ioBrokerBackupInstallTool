@@ -31,6 +31,14 @@ echo    Standard: Benutzer= pi PW= raspberry
 echo    2 zum installieren von IoBroker eingeben.
 echo.
 echo      ---------------------------------
+pause
+cls
+echo                 Zugangsdaten
+echo      ---------------------------------
+echo              IP= %IP%
+echo              Benutzername= %BEN%
+echo              Passwort= %PSW% 
+echo      =================================
 echo.
 echo   [1] Image fuer Raspberry downloaden
 echo   [2] Installieren von ioBroker
