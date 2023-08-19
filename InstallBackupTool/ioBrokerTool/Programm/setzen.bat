@@ -23,9 +23,9 @@ goto END
 pushd "Backup" ||goto :eof
 copy "!auswahl_%choice%!" "archive.tar.gz"
 popd
-start /WAIT Programm/plink.exe %BEN%@%IP% -pw %PSW% -m Programm/iobrokerstop.txt
+start /WAIT Programm/plink.exe -t -v %BEN%@%IP% -pw %PSW% -m Programm/iobrokerstop.txt
 start /WAIT Programm/pscp.exe -q -batch -pw %PSW% Backup/archive.tar.gz %BEN%@%IP%:/opt/iobroker/
-start /WAIT Programm/plink.exe %BEN%@%IP% -pw %PSW% -m Programm/reset.txt
+start /WAIT Programm/plink.exe -t -v %BEN%@%IP% -pw %PSW% -m Programm/reset.txt
 cd Backup
 del archive.tar.gz
 exit

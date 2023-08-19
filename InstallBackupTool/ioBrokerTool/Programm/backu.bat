@@ -40,7 +40,7 @@ exit
 :EINR
 cls
 cd Programm
-start cmd /k plink.exe %BEN%@%IP% -pw %PSW% -m kontrol.txt
+start cmd /k plink.exe -t -v %BEN%@%IP% -pw %PSW% -m kontrol.txt
 cd ..
 echo.
 echo.
@@ -56,34 +56,8 @@ echo        Sollte /dev/sda* oder sdb*, ..., nicht existieren bitte Raspberry ne
 echo           Dann dieses Programm beenden und diesen Vorgang hier Wiederholen.
 echo                                ---------------------------------
 echo.
-echo.
-echo.
-echo.
-echo.
-echo.
-echo.
-echo.
-echo.
-echo.
-echo.
-echo.
 pause
-echo.
-echo.
-echo.
-echo.
-echo.
-echo.
-echo.
-echo.
-echo.
-echo.
-echo.
-echo.
-echo.
-echo.
-echo. 
-echo.
+cls
 echo                              ---------------------------------
 echo.
 set numa=1
@@ -94,25 +68,24 @@ echo.
 echo.
 echo sudo mkdir -p /media; sudo mkdir -p /media/usbstick; sudo mkdir -p /media/usbstick/backupDir; sudo chown -R iobroker /media/usbstick; crontab -l ^| sed -e '/sudo mount -t/d' ^| crontab; ^(crontab ^-l ^&^& echo "@reboot sudo mount -t %vat% -o utf8,uid=iobroker,gid=iobroker,noatime /dev/%num% /media/usbstick") ^| crontab -; sudo mount -t %vat% -o utf8,uid=iobroker,gid=iobroker,noatime /dev/%num% /media/usbstick;sudo mkdir -p /media; sudo mkdir -p /media/usbstick; sudo mkdir -p /media/usbstick/backupDir; sudo chown -R iobroker /media/usbstick;>Programm/usb.txt
 
-start /WAIT Programm/plink.exe %BEN%@%IP% -pw %PSW% -m Programm/usb.txt
-start backu.bat
-exit
+start /WAIT Programm/plink.exe -t -v %BEN%@%IP% -pw %PSW% -m Programm/usb.txt
+goto END
 :AENDERN
 start diskmgmt.msc
 goto END
 :USBU
-start /WAIT Programm/plink.exe %BEN%@%IP% -pw %PSW% -m Programm/unmount.txt
+start /WAIT Programm/plink.exe -t -v %BEN%@%IP% -pw %PSW% -m Programm/unmount.txt
 goto END
 :USB
-start /WAIT Programm/plink.exe %BEN%@%IP% -pw %PSW% -m Programm/usb.txt
+start /WAIT Programm/plink.exe -t -v %BEN%@%IP% -pw %PSW% -m Programm/usb.txt
 goto END
 :KONTROL
 cd Programm
-start cmd /k plink.exe %BEN%@%IP% -pw %PSW% -m kontrol.txt
+start cmd /k plink.exe -t -v %BEN%@%IP% -pw %PSW% -m kontrol.txt
 cd ..
 goto END
 :USBBACK
-start /WAIT Programm/plink.exe %BEN%@%IP% -pw %PSW% -m Programm/usbback.txt
+start /WAIT Programm/plink.exe -t -v %BEN%@%IP% -pw %PSW% -m Programm/usbback.txt
 goto END
 :USBRET
 cls
@@ -126,7 +99,7 @@ echo                 Sind dort keine, unbedingt Abbrechen.
 echo.
 echo.
 cd Programm
-start cmd /k plink.exe %BEN%@%IP% -pw %PSW% -m list.txt
+start cmd /k plink.exe -t -v %BEN%@%IP% -pw %PSW% -m list.txt
 cd ..
 echo.	
 echo   [1] Weiter
@@ -138,9 +111,8 @@ if %asw%==1 goto WEITER
 if %asw%==2 goto END
 goto END
 :WEITER
-start /WAIT Programm/plink.exe %BEN%@%IP% -pw %PSW% -m Programm/usbret.txt
-start backu.bat
-exit
+start /WAIT Programm/plink.exe -t -v %BEN%@%IP% -pw %PSW% -m Programm/usbret.txt
+goto END
 :BEEN
 start restart.bat
 exit

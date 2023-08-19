@@ -22,13 +22,13 @@ goto END
 :NODE12
 start restart.bat
 cd Programm
-start cmd /k plink.exe %BEN%@%IP% -pw %PSW% -m iobrokerinstall12.txt
+start cmd /k plink.exe -t -v %BEN%@%IP% -pw %PSW% -m iobrokerinstall12.txt
 cd ..
 exit
 :NODE14
 start restart.bat
 cd Programm
-start cmd /k plink.exe %BEN%@%IP% -pw %PSW% -m iobrokerinstall14.txt
+start cmd /k plink.exe -t -v %BEN%@%IP% -pw %PSW% -m iobrokerinstall14.txt
 cd ..
 exit
 :STOP

@@ -9,13 +9,10 @@ echo              IP= %IP%
 echo              Benutzername= %BEN%
 echo              Passwort= %PSW% 
 echo      =================================
-echo      Sollte sudo ein Passwort brauchen
-echo      In Putty sudo visudo eingeben/erweitere            
-echo          %%sudo ALL=(ALL:ALL) ALL
-echo          %BEN% ALL=NOPASSWD:ALL
+echo.
 echo.	
-echo             Backup-Skript
-echo             =============
+echo              Backup-Skript
+echo              =============
 echo.	
 echo   [1] Backup erstellen
 echo   [2] Backup wiederherstellen (BACKUP MUSS VORHANDEN SEIN)

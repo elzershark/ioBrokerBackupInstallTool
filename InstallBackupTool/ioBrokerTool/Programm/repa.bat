@@ -50,17 +50,17 @@ if %asw%==3 goto STOP
 goto END
 :AFIX
 cd Programm
-START cmd /k plink.exe %BEN%@%IP% -pw %PSW% -m afix.txt
+START cmd /k plink.exe -t -v %BEN%@%IP% -pw %PSW% -m afix.txt
 cd ..
 goto END
 :NPM
 cd Programm
-start cmd /k plink.exe %BEN%@%IP% -pw %PSW% -m npm.txt
+start cmd /k plink.exe -t -v %BEN%@%IP% -pw %PSW% -m npm.txt
 cd ..
 goto END
 :REINSTALL
 cd Programm
-start cmd /k plink.exe %BEN%@%IP% -pw %PSW% -m reinstall.txt
+start cmd /k plink.exe -t -v %BEN%@%IP% -pw %PSW% -m reinstall.txt
 cd ..
 goto END
 :ADAPTER
@@ -82,22 +82,22 @@ start putty.bat
 goto END
 :NODE12
 cd Programm
-start cmd /k plink.exe %BEN%@%IP% -pw %PSW% -m node12.txt
+start cmd /k plink.exe -t -v %BEN%@%IP% -pw %PSW% -m node12.txt
 cd ..
 goto END
 :NODE14
 cd Programm
-start cmd /k plink.exe %BEN%@%IP% -pw %PSW% -m node14.txt
+start cmd /k plink.exe -t -v %BEN%@%IP% -pw %PSW% -m node14.txt
 cd ..
 goto END
 :ADAPTER12
 cd Programm
-start cmd /k plink.exe %BEN%@%IP% -pw %PSW% -m adapter12.txt
+start cmd /k plink.exe -t -v %BEN%@%IP% -pw %PSW% -m adapter12.txt
 cd ..
 goto END
 :ADAPTER14
 cd Programm
-start cmd /k plink.exe %BEN%@%IP% -pw %PSW% -m adapter14.txt
+start cmd /k plink.exe -t -v %BEN%@%IP% -pw %PSW% -m adapter14.txt
 cd ..
 goto END
 :STOP
