@@ -1,4 +1,7 @@
 @echo off
+goto END1
+:END1
+cls
 echo.
 echo.
 echo                 Zugangsdaten
@@ -70,9 +73,6 @@ exit
 :INSTALL
 start install.bat
 goto END1
-:END1
-start image.bat
-exit
 :STOP1
 start restart.bat
 exit

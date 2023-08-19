@@ -1,4 +1,7 @@
 @echo off
+goto END
+:END
+cls
 echo.
 echo.
 echo                 Zugangsdaten
@@ -30,38 +33,20 @@ if %asw%==4 goto REINSTALL
 if %asw%==5 goto ADAPTER
 if %asw%==6 goto PUTTY
 if %asw%==7 goto STOP
-start repa.bat
-exit
+goto END
 :NODE
 echo       Welche Node Version?
 echo             =============
 echo.	
-echo   [1] Node 16 
-echo   [2] Node 18 (Standard)
-echo   [3] Node 20
-echo   [4] Beenden
+echo   [1] iobroker Standard/Empfohlen
+echo   [2] Node 20 (Beta Node Test)
+echo   [3] Beenden
 echo.
 set asw=0
 set /p asw="Bitte Auswahl eingeben: "
 if %asw%==1 goto NODE12
 if %asw%==2 goto NODE14
-if %asw%==3 goto NODE16
-if %asw%==4 goto STOP
-goto END
-:NODE12
-cd Programm
-start cmd /k plink.exe %BEN%@%IP% -pw %PSW% -m node12.txt
-cd ..
-goto END
-:NODE14
-cd Programm
-start cmd /k plink.exe %BEN%@%IP% -pw %PSW% -m node14.txt
-cd ..
-goto END
-:NODE16
-cd Programm
-start cmd /k plink.exe %BEN%@%IP% -pw %PSW% -m node16.txt
-cd ..
+if %asw%==3 goto STOP
 goto END
 :AFIX
 cd Programm
@@ -82,17 +67,15 @@ goto END
 echo       Welche Node Version?
 echo             =============
 echo.	
-echo   [1] Node 16 
-echo   [2] Node 18 (Standard)
-echo   [3] Node 20
-echo   [4] Beenden
+echo   [1] iobroker Standard/Empfohlen
+echo   [2] Node 20 (Beta Node Test)
+echo   [3] Beenden
 echo.
 set asw=0
 set /p asw="Bitte Auswahl eingeben: "
 if %asw%==1 goto ADAPTER12
 if %asw%==2 goto ADAPTER14
-if %asw%==3 goto ADAPTER16
-if %asw%==4 goto STOP
+if %asw%==3 goto STOP
 goto END
 :PUTTY
 start putty.bat
@@ -107,11 +90,6 @@ cd Programm
 start cmd /k plink.exe %BEN%@%IP% -pw %PSW% -m node14.txt
 cd ..
 goto END
-:NODE16
-cd Programm
-start cmd /k plink.exe %BEN%@%IP% -pw %PSW% -m node16.txt
-cd ..
-goto END
 :ADAPTER12
 cd Programm
 start cmd /k plink.exe %BEN%@%IP% -pw %PSW% -m adapter12.txt
@@ -122,14 +100,6 @@ cd Programm
 start cmd /k plink.exe %BEN%@%IP% -pw %PSW% -m adapter14.txt
 cd ..
 goto END
-:ADAPTER16
-cd Programm
-start cmd /k plink.exe %BEN%@%IP% -pw %PSW% -m adapter16.txt
-cd ..
-goto END
-:END
-start repa.bat
-exit
 :STOP
 start restart.bat
 exit

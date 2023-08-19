@@ -1,4 +1,7 @@
 @echo off
+goto END
+:END
+cls
 echo.
 echo.
 echo                 Zugangsdaten
@@ -13,7 +16,7 @@ echo             Backup-Skript
 echo             =============
 echo.	
 echo   [1] Backup erstellen
-echo   [2] Backup zuruecksetzen (BACKUP MUSS VORHANDEN SEIN)
+echo   [2] Backup wiederherstellen (BACKUP MUSS VORHANDEN SEIN)
 echo   [3] ioBroker reparieren/upgraden
 echo   [4] Putty oeffnen
 echo   [5] Backup Order anzeigen
@@ -33,8 +36,6 @@ if %asw%==6 goto DOWN
 if %asw%==7 goto WLAN
 if %asw%==8 goto BACKU
 if %asw%==9 goto STOP
-start restart.bat
-exit
 goto END
 :FILES
 start erstellen.bat
@@ -60,7 +61,5 @@ goto END
 :DOWN
 start image.bat
 goto STOP
-:END
-start restart.bat
 :STOP
 exit

@@ -1,4 +1,7 @@
 @echo off
+goto END
+:END
+cls
 echo.
 echo.
 echo                 Zugangsdaten
@@ -23,9 +26,7 @@ start restart.bat
 exit
 :MIT
 start Programm/Wlan/Wlan.exe
-start wlan.bat
-exit
+goto END
 :AENDERN
 start Programm/WinSCP/WinSCP.exe
-start wlan.bat
-exit
+goto END

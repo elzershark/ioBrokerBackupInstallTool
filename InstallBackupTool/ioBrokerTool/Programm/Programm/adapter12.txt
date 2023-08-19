@@ -7,15 +7,14 @@ rm -r node_modules/
 chown -R iobroker /opt/iobroker
 apt update -y && apt upgrade -y
 apt-get purge nodejs -y && apt-get autoremove -y && apt-get autoclean -y
-curl -sL https://deb.nodesource.com/setup_16.x | bash -
-apt-get install -y nodejs
 chown -R iobroker /opt/iobroker
 HERE
 curl -sL https://iobroker.net/install.sh | bash -
 iobroker stop
 npm install -y iobroker.js-controller --unsafe-perm --production --save --prefix
 iobroker stop
-iobroker setup
+iobroker setup first
+iobroker stop
 iobroker del admin
 iobroker add admin
 curl -sL https://iobroker.net/fix.sh | bash -

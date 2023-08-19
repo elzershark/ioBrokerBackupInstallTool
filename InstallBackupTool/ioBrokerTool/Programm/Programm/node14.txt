@@ -5,10 +5,12 @@ npm cache verify
 chown -R iobroker /opt/iobroker
 apt update -y && apt upgrade -y
 apt-get purge nodejs -y && apt-get autoremove -y && apt-get autoclean -y
-curl -sL https://deb.nodesource.com/setup_18.x | bash -
+curl -sL https://deb.nodesource.com/setup_20.x | bash -
 apt-get install -y nodejs
 chown -R iobroker /opt/iobroker
 HERE
+curl -sL https://iobroker.net/install.sh | bash -
+iobroker stop
 npm install -y iobroker.js-controller --unsafe-perm --production --save --prefix
 iobroker stop
 curl -sL https://iobroker.net/fix.sh | bash -

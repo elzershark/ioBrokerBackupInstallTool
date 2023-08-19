@@ -1,4 +1,7 @@
 @echo off &setlocal
+goto END
+:END
+cls
 echo                     USB- Laufwerk am Raspberry installieren
 echo                        ---------------------------------
 echo.
@@ -19,7 +22,7 @@ echo			[3] USB Mount Kontrolle u. Ordner erstellen auf Raspi / Stick
 echo			[4] USB Aktivieren
 echo			[5] USB Auswerfen
 echo			[6] Backup erstellen
-echo			[7] Backup zuruecksetzen (BACKUP MUSS VORHANDEN SEIN)
+echo			[7] Backup wiederherstellen (BACKUP MUSS VORHANDEN SEIN)
 echo			[8] Beenden
 echo.
 set asw=0
@@ -35,6 +38,7 @@ if %asw%==8 goto BEEN
 start restart.bat
 exit
 :EINR
+cls
 cd Programm
 start cmd /k plink.exe %BEN%@%IP% -pw %PSW% -m kontrol.txt
 cd ..
@@ -95,27 +99,23 @@ start backu.bat
 exit
 :AENDERN
 start diskmgmt.msc
-start backu.bat
-exit
+goto END
 :USBU
 start /WAIT Programm/plink.exe %BEN%@%IP% -pw %PSW% -m Programm/unmount.txt
-start backu.bat
-exit
+goto END
 :USB
 start /WAIT Programm/plink.exe %BEN%@%IP% -pw %PSW% -m Programm/usb.txt
-start backu.bat
-exit
+goto END
 :KONTROL
 cd Programm
 start cmd /k plink.exe %BEN%@%IP% -pw %PSW% -m kontrol.txt
 cd ..
-start backu.bat
-exit
+goto END
 :USBBACK
 start /WAIT Programm/plink.exe %BEN%@%IP% -pw %PSW% -m Programm/usbback.txt
-start backu.bat
-exit
+goto END
 :USBRET
+cls
 echo.
 echo.
 echo                 Das zuruecksetzen wirklich ausfuehren?
@@ -139,9 +139,6 @@ if %asw%==2 goto END
 goto END
 :WEITER
 start /WAIT Programm/plink.exe %BEN%@%IP% -pw %PSW% -m Programm/usbret.txt
-start backu.bat
-exit
-:END
 start backu.bat
 exit
 :BEEN

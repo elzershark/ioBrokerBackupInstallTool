@@ -1,4 +1,6 @@
 @echo off
+goto END
+:END
 cls
 setlocal enabledelayedexpansion
 set zaehler=0
@@ -15,8 +17,7 @@ if %awo%==j goto ENDE
 if %awo%==ja goto ENDE
 if %awo%==y goto ENDE
 if %awo%==yes goto ENDE
-start setzen.bat
-exit
+goto END
 :ENDE
 @echo off &setlocal
 pushd "Backup" ||goto :eof
