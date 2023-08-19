@@ -15,4 +15,3 @@ if exist %of%Backup%cdate%.tar.gz ( goto :loop
 ren archive.tar.gz %of%Backup%cdate%.tar.gz
 
 exit
-
