@@ -3,16 +3,12 @@ goto END1
 :END1
 cls
 echo.
-echo.
 echo                 Zugangsdaten
 echo      ---------------------------------
 echo              IP= %IP%
 echo              Benutzername= %BEN%
 echo              Passwort= %PSW% 
 echo      =================================
-echo.
-echo.
-echo.
 echo.
 echo            INSTALLATION IOBROKER
 echo      ---------------------------------
@@ -30,22 +26,10 @@ echo    eingeben (IP - Benutzer - Passwort)
 echo    Standard: Benutzer= pi PW= raspberry
 echo    2 zum installieren von IoBroker eingeben.
 echo.
-echo      ---------------------------------
-pause
-cls
-echo                 Zugangsdaten
-echo      ---------------------------------
-echo              IP= %IP%
-echo              Benutzername= %BEN%
-echo              Passwort= %PSW% 
-echo      =================================
-echo.
 echo   [1] Image fuer Raspberry downloaden
 echo   [2] Installieren von ioBroker
-echo   !!!LESEN was dann da steht im Fenster!!!
 echo.
 echo   [3] Beenden
-echo.
 set abw=0
 set /p abw="Bitte Auswahl eingeben: "
 if %abw%==1 goto RAS3
