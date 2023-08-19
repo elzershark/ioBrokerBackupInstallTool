@@ -1,6 +1,6 @@
 @echo off
 start /WAIT Programm/plink.exe -t -v %BEN%@%IP% -pw %PSW% -m Programm/backup.txt
-start /WAIT Programm/pscp.exe -q -batch -pw %PSW% %BEN%@%IP%:/opt/iobroker/archive.tar.gz ./Backup
+start /WAIT Programm/pscp.exe -v -batch -pw %PSW% %BEN%@%IP%:/opt/iobroker/archive.tar.gz ./Backup
 start /WAIT Programm/plink.exe -t -v %BEN%@%IP% -pw %PSW% -m Programm/rm.txt
 FOR /F "tokens=1,2,3,4,5 delims=/. " %%a in ('date/T') do set CDATE=%%a%%b%%c%%d
 cd Backup
