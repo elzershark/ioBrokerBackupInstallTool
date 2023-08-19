@@ -1,5 +1,7 @@
 iobroker stop
 sudo su <<HERE
+mkdir /home/iobroker
+chown -R iobroker /home/iobroker
 cd /opt/iobroker
 npm cache verify
 apt update -y && apt upgrade -y
