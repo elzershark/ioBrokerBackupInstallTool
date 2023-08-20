@@ -5,19 +5,23 @@ chown -R iobroker /home/iobroker
 cd /opt/iobroker
 npm cache verify
 apt update -y && apt upgrade -y
-apt-get purge nodejs -y && apt-get autoremove -y && apt-get autoclean -y
 chown -R iobroker /opt/iobroker
 HERE
 iobroker stop
+iobroker update
+iobroker upgrade self
+iobroker upgrade -y
+sudo su <<HERES
+apt-get purge nodejs -y && apt-get autoremove -y && apt-get autoclean -y
+HERES
 curl -sL https://iobroker.net/install.sh | bash -
+iobroker stop
+iobroker setup first
 iobroker stop
 npm install -y iobroker.js-controller --unsafe-perm --production --save --prefix
 iobroker stop
 curl -sL https://iobroker.net/fix.sh | bash -
 iobroker stop
 npm rebuild
-iobroker update
-iobroker upgrade self
-iobroker upgrade -y
 iobroker start
 iobroker restart admin
