@@ -11,6 +11,8 @@ HERE
 iobroker stop
 curl -sL https://iobroker.net/install.sh | bash -
 iobroker stop
+iobroker setup first
+iobroker stop
 npm install -y iobroker.js-controller --unsafe-perm --production --save --prefix
 iobroker stop
 curl -sL https://iobroker.net/fix.sh | bash -
