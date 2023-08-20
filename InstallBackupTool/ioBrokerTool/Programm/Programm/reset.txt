@@ -5,7 +5,7 @@ chown -R iobroker /home/iobroker
 cd /opt/iobroker/
 rm -r iobroker-data/
 rm -r node_modules/
-tar -xzf archive.tar.gz
+tar -xzf archive.tar.gz --checkpoint=1000
 rm -r archive.tar.gz
 chmod 755 /opt/iobroker
 chown -R iobroker /opt/iobroker
