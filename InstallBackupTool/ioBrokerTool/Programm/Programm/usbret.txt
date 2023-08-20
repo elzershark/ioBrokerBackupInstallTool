@@ -7,7 +7,7 @@ rm -r node_modules/
 HERE
 cd /media/usbstick/
 last=`ls -tr | tail -1`
-tar -xzf $last -C /opt/iobroker
+tar -xzf $last -C /opt/iobroker --checkpoint=1000
 sudo su <<HERES
 cd /opt/iobroker/
 chmod 755 /opt/iobroker
