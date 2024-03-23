@@ -4,7 +4,8 @@ mkdir /home/iobroker
 chown -R iobroker /home/iobroker
 cd /opt/iobroker
 npm cache verify
-apt update -y && apt upgrade -y
+apt update -y
+apt install curl -y
 chown -R iobroker /opt/iobroker
 HERE
 iobroker stop
