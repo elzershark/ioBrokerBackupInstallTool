@@ -3,7 +3,8 @@ sudo su <<HERE
 mkdir /home/iobroker
 chown -R iobroker /home/iobroker
 iobroker stop
-apt update -y && apt upgrade -y
+apt update -y
+apt install curl -y
 apt-get purge nodejs -y && apt-get autoremove -y && apt-get autoclean -y
 HERE
 curl -sL https://iobroker.net/install.sh | bash -
