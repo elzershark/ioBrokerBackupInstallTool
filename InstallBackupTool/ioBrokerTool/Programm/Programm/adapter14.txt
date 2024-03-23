@@ -7,7 +7,8 @@ cd /opt/iobroker
 npm cache verify
 rm -r node_modules/
 chown -R iobroker /opt/iobroker
-apt update -y && apt upgrade -y
+apt update -y
+apt install curl -y
 apt-get purge nodejs -y && apt-get autoremove -y && apt-get autoclean -y
 curl -sL https://deb.nodesource.com/setup_20.x | bash -
 apt-get install -y nodejs
