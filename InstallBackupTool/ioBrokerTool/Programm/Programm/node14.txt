@@ -8,7 +8,7 @@ chown -R iobroker /opt/iobroker
 apt update -y
 apt install curl -y
 apt-get purge nodejs -y && apt-get autoremove -y && apt-get autoclean -y
-curl -sL https://deb.nodesource.com/setup_20.x | bash -
+curl -sL https://deb.nodesource.com/setup_22.x | bash -
 apt-get install -y nodejs
 chown -R iobroker /opt/iobroker
 HERE
