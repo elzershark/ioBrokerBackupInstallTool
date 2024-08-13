@@ -9,7 +9,6 @@ rm `sudo find / -name nodesource.gpg`
 rm `sudo find / -name nodesource.key`
 rm /etc/apt/sources.list.d/nodesource.list
 apt-get autoremove -y && apt-get autoclean -y
-npm cache verify
 apt update -y
 apt install curl -y
 HERE
