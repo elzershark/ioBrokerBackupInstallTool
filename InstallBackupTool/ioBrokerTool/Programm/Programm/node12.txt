@@ -1,24 +1,46 @@
 iobroker stop
 sudo su <<HERE
+echo "ab hier ist sudo "
+echo "mkdir /home/iobroker"
 mkdir /home/iobroker
+echo "chown -R iobroker /home/iobroker"
 chown -R iobroker /home/iobroker
+echo "cd /opt/iobroker"
 cd /opt/iobroker
+echo "apt-get purge nodejs -y"
 apt-get purge nodejs -y
+echo "apt purge --autoremove nodejs* npm node-* libnode*"
 apt purge --autoremove nodejs* npm node-* libnode*
+echo "apt-get autoremove -y && apt-get autoclean -y"
 apt-get autoremove -y && apt-get autoclean -y
+echo "apt update -y"
 apt update -y
+echo "apt install curl -y"
 apt install curl -y
 HERE
+echo "ab hier ist kein sudo mehr"
 cd /opt/iobroker
+echo "iobroker stop"
 iobroker stop
+echo "curl -sL https://iobroker.net/fix.sh | bash -p"
 curl -sL https://iobroker.net/fix.sh | bash -
+echo "iobroker stop"
 iobroker stop
+echo "iob nodejs-update"
 iob nodejs-update
+echo "iobroker stop"
 iobroker stop
+echo "iobroker update"
 iobroker update
+echo "iobroker upgrade self"
 iobroker upgrade self
+echo "iobroker upgrade -y"
 iobroker upgrade -y
+echo "iobroker stop"
 iobroker stop
-npm rebuild
+echo "iobroker rebuild"
+iobroker rebuild
+echo "iobroker start"
 iobroker start
+echo "iobroker restart admin"
 iobroker restart admin
